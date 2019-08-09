@@ -14,7 +14,7 @@
 
         <a-assets>
             <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
-            <a-asset-item id="fbx-asset" src="./models/TREX/TrexByJoel3d.fbx"></a-asset-item>
+            <a-asset-item id="fbx-asset" src="models/TREX/TrexByJoel3d.fbx"></a-asset-item>
         </a-assets>
 
         <a-marker type='barcode' value='7'>
@@ -30,12 +30,8 @@
          
     
         <a-marker preset='hiro'>
-            <a-entity
-                gltf-model="#animated-asset"
-                scale="1">
-            </a-entity>
             <!-- <a-box position='0 0.5 0' material='color: blue;' scale="2 2 2"></a-box> -->
-            <!-- <a-entity fbx-model="#fbx-asset" scale="0.01 0.01 0.01"></a-entity> -->
+            <a-entity fbx-model=src: url(models/TREX/TrexByJoel3d.fbx);" scale="0.01 0.01 0.01"></a-entity>
         </a-marker>
   
         <a-entity camera></a-entity>
