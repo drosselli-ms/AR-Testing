@@ -5,8 +5,7 @@
     </head>
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-    <!-- <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> -->
+    <!-- <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> -->
     
     <body style='margin : 0px; overflow: hidden;'>
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
@@ -14,9 +13,7 @@
 
         <a-assets>
             <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
-            <a-asset-item id="fbx-asset" src="models/TREX/TrexByJoel3d.fbx"></a-asset-item>
-            <a-asset-item id="obj-asset" scr="models/dino/dino.obj"></a-asset-item>
-            <a-asset-item id="assetAframe" src="models/aframe.ply"></a-asset-item>
+			<a-asset-item id="Building" src="models/scene.gltf"></a-asset-item>
         </a-assets>
 
         <a-marker type='barcode' value='7'>
@@ -32,9 +29,10 @@
          
     
         <a-marker preset='hiro'>
-            <!-- <a-box position='0 0.5 0' material='color: blue;' scale="2 2 2"></a-box> -->
-            <!-- <a-entity scale="0.001 0.001 0.001" fbx-model=src: url(https://raw.githubusercontent.com/drosselli-ms/AR-Testing/master/models/TREX/TrexByJoel3d.fbx);"></a-entity> -->
-            <a-entity obj-model="src: #obj-asset" scale='0.2 0.2 0.2'></a-entity>
+            <a-entity
+                gltf-model="#Building"
+                scale="1">
+            </a-entity>
         </a-marker>
   
         <a-entity camera></a-entity>
